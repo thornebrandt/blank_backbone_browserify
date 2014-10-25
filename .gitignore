@@ -1,0 +1,6 @@
+#CodeKit Build Files
+_sass/.sass-cache
+*.codekit
+
+#OSX System Files
+.DS_Store

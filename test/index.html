@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Bullpen Testing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+    <style>
+      body{
+        background: #a78864;
+        color: white;
+      }
+      #mocha-stats{
+        color: white;
+      }
+      #mocha-stats em{
+        color: pink;
+      }
+      #fixtures{
+        display: none;
+      }
+      .test.pass.pending h2{
+        color: #474472;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="fixtures">
+
+
+    </div>
+    <!-- load and configure mocha -->
+    <script src="../public/config.js"></script>
+    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script>
+      'use strict';
+      mocha.setup('bdd')
+      mocha.slow(500)
+      mocha.timeout(3000)
+    </script>
+
+    <!-- load test suite -->
+    <script src="../test/browserified_tests.js"></script>
+
+    <!-- kick of tests -->
+    <script>
+      if (window.mochaPhantomJS) {
+        window.mochaPhantomJS.run()
+      } else {
+        mocha.run()
+      }
+    </script>
+  </body>
+</html>

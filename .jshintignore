@@ -1,0 +1,4 @@
+browser/example/lib/**/*
+browser/dist/**/*
+browser/test/browserified_tests.js
+public/*.js
